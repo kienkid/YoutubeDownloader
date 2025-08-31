@@ -25,6 +25,7 @@ def download_youtube_as_mp4(url, output_folder='downloads'):
 
     except Exception as e:
         print(f"Error: {e}")
+        print("There is something wrong with the URL, please recheck")
 
 def download_youtube_as_mp3(url, output_folder='downloads'):
     # Create output folder if it doesn't exist
@@ -51,11 +52,12 @@ def download_youtube_as_mp3(url, output_folder='downloads'):
 
     except Exception as e:
         print(f"Error: {e}")
+        print("There is something wrong with the URL, please recheck")
 
 # Example usage
 if __name__ == "__main__":
     video_url = input("Enter YouTube video URL: ")
-    extension_output = input("Output extension (Currently available: MP3, MP4)")
+    extension_output = input("Output extension (Currently available: MP3, MP4): ")
     if extension_output == "MP3":
         download_youtube_as_mp3(video_url)
     elif extension_output == "MP4":
