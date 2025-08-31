@@ -55,10 +55,10 @@ def download_youtube_as_mp3(url, output_folder='downloads'):
 # Example usage
 if __name__ == "__main__":
     video_url = input("Enter YouTube video URL: ")
-    extension_output = input("Output extension (MP3 or MP4)")
+    extension_output = input("Output extension (Currently available: MP3, MP4)")
     if extension_output == "MP3":
         download_youtube_as_mp3(video_url)
     elif extension_output == "MP4":
         download_youtube_as_mp4(video_url)
     else :
-        sys.exit("Exit program successful")
+        sys.exit("The output extension is not available for now, please re-run the script and choose the available extension")
