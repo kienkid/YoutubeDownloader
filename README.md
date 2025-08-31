@@ -9,7 +9,7 @@ This Python project allows you to download YouTube videos via URL and convert th
 Make sure you have Python installed, then install the required packages:
 
 ```bash
-pip install pytube moviepy
+pip install pytube moviepy==1.0.3
 ```
 ## 🚀 How to Use
 
