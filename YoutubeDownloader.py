@@ -1,4 +1,4 @@
-
+# KienKid
 from pytube import YouTube
 from moviepy.editor import AudioFileClip
 import os
@@ -56,6 +56,8 @@ if __name__ == "__main__":
     video_url = input("Enter YouTube video URL: ")
     extension_output = input("Output extension (MP3 or MP4)")
     if extension_output == "MP3":
-      download_youtube_as_mp3(video_url)
-    if extension_output == "MP4":
-      download_youtube_as_mp4(video_url)
+        download_youtube_as_mp3(video_url)
+    elif extension_output == "MP4":
+        download_youtube_as_mp4(video_url)
+    else :
+        sys.exit("Exit program successful")
