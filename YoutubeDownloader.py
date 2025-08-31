@@ -2,6 +2,7 @@
 from pytube import YouTube
 from moviepy.editor import AudioFileClip
 import os
+import sys
 
 def download_youtube_as_mp4(url, output_folder='downloads'):
     # Create output folder if it doesn't exist
