@@ -6,7 +6,7 @@ import os
 import sys
 
 #download video
-def download_youtube_as_mp4(url, output_folder='downloads'):
+def download_youtube_as_mp4(url, output_folder = os.path.expanduser("~")+"/Downloads/"):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
@@ -35,7 +35,7 @@ def download_youtube_as_mp4(url, output_folder='downloads'):
         print("There is something wrong with the URL, please recheck")
 
 #download and convert to mp3 file extension
-def download_youtube_as_mp3(url, output_folder='downloads'):
+def download_youtube_as_mp3(url, output_folder = os.path.expanduser("~")+"/Downloads/"):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
