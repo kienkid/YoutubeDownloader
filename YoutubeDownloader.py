@@ -1,10 +1,11 @@
 # KienKid
-from pytube import YouTube
-from moviepy.editor import AudioFileClip
-from tqdm import tqdm
+from pytubefix import YouTube #fetch the internet to download the video
+from moviepy.editor import AudioFileClip #convert to mp3 file extension by decodes the AAC audio (m4a) and re-encodes it as MP3
+from tqdm import tqdm # CLI progress bar
 import os
 import sys
 
+#download video
 def download_youtube_as_mp4(url, output_folder='downloads'):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -33,6 +34,7 @@ def download_youtube_as_mp4(url, output_folder='downloads'):
         print(f"Error: {e}")
         print("There is something wrong with the URL, please recheck")
 
+#download and convert to mp3 file extension
 def download_youtube_as_mp3(url, output_folder='downloads'):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -65,10 +67,10 @@ def download_youtube_as_mp3(url, output_folder='downloads'):
         print(f"Error: {e}")
         print("There is something wrong with the URL, please recheck")
 
-# Example usage
+#Main
 if __name__ == "__main__":
     video_url = input("Enter YouTube video URL: ")
-    extension_output = input("Output extension (Currently available: MP3, MP4): ")
+    extension_output = input("Output extension (Currently available: MP3, MP4): ").upper()
     if extension_output == "MP3":
         download_youtube_as_mp3(video_url)
     elif extension_output == "MP4":
